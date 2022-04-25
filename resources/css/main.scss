@@ -2,6 +2,169 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 html, body {
-    min-height: 100vh;
-
+    min-height: 600px;
+    height: 100vh;
+    font-family: $font-family-cabin;
+    margin: 0;
+    // overflow-x: hidden;
 }
+
+// #loader-spinner {
+    //     height: 100vh;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     background-color: $green-color;
+    
+    //     i {
+        //         color: #fff;
+        //     }
+        // }
+        
+        main {
+            display: flex;
+        }
+        
+        .main-img-container {
+            @media screen and (min-width: 1200px) {
+                background: url('../images/cover-image.jpg') no-repeat center center;
+                background-size: cover;
+                min-height: 925px;
+                height: 100vh;
+                width: 70%;
+            }
+        }
+        
+        .written-content {
+            position: relative;
+            background-color: $green-color;
+            box-shadow: $left-box-shadow;
+            @media screen and (min-width: 1200px) {
+                width: 30%;
+                
+            }
+            
+            .header-box {
+                .container, .row, .col-12 {
+                    height: 100%;
+                }
+                
+                hr {
+                    height: 4px;
+                    background-color: #fff;
+                    max-width: 50%;
+                    margin: 0 auto;
+                    box-shadow: $header-box-shadow;
+                    opacity: 1;
+                }
+                
+                h1 {
+                    font-size: 4.68rem;
+                    font-weight: 800;
+                    text-shadow: $header-box-shadow;
+                    margin-bottom: 0;
+                }
+                
+                h2 {
+                    margin-top: .5rem;
+                    font-size: 1.75rem;
+                    margin-bottom: 0;
+                    text-shadow: $header-box-shadow;
+                }
+                
+                color: #fff;
+                width: 140%;
+                position: absolute;
+                top: 40px;
+                right: 0;
+                background-color: $brown-color;
+                height: 334px;
+                border-left: 15px solid $green-color;
+                box-shadow: $header-box-shadow;
+                transition: box-shadow .4s ease-in-out;
+                
+                &:hover {
+                    box-shadow: $box-shadow-hover;
+                }
+            }
+            
+            
+            
+            .social-section {
+                margin-top: 400px;
+                display: flex;
+                align-items: flex-end;
+                flex-direction: column;
+                
+                .mini-box {
+                    background-color: $brown-color;
+                    box-shadow: $header-box-shadow;
+                    border-left: 5px solid #fff;
+                    color: #fff;
+                    height: 150px;
+                    width: 20%;
+                    transition: all .25s ease-in-out;
+                    margin-bottom: 25px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow-x: hidden;
+                    
+                    a {
+                        display: flex;
+                        
+                        i, span {
+                            color: #fff;
+                        }
+                        
+                        text-decoration: none;
+                        
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                    
+                    @media screen and (min-width: 1200px) {
+                        
+                        a {
+                            height: 100%;
+                            width: 100%;
+                            justify-content: center;
+
+                            i,
+                            span {
+                                font-size: 3rem;
+                                align-self: center;
+                            }
+                            
+                            span {
+                                width: 0;
+                                opacity: 0;
+                                transition: all .25s ease-in-out;
+                            }
+                        }
+                        
+                        &:hover {
+                            width: 95%;
+                            box-shadow: $box-shadow-hover;
+                            
+                            
+                            a {
+                                
+                                span {
+                                    width: auto;
+                                    opacity: 1 !important;
+                                    margin-left: 1.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+        h1, h2, h3 {
+            font-family: $font-family-cabin;
+            font-weight: 800;
+        }
